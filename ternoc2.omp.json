@@ -35,13 +35,14 @@
                 {
                     "background": "p:solarized_magenta",
                     "style": "diamond",
+                    "template": "\uf233 {{.Icon}} ",
                     "type":"os"
                 },
                 {
                     "background": "p:solarized_magenta",
                     "style": "diamond",
                     "trailing_diamond": "\ue0b4",
-                    "template": "\uef09 {{ .HostName }} ",
+                    "template": "{{ .HostName }} ",
                     "type": "session"
                 },
                 {
