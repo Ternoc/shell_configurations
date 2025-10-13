@@ -26,8 +26,7 @@
                     "background": "p:solarized_red",
                     "style": "diamond",
                     "leading_diamond": "\ue0b6",
-                    "trailing_diamond": "\ue0b4",
-                    "template": "\uf007 {{ .UserName }}",
+                    "template": "\uf007 {{ .UserName }} ",
                     "type": "session"
                 },
                 {
@@ -49,6 +48,7 @@
                         "style": "full"
                     },
                     "style": "diamond",
+                    "leading_diamond": "\ue0b6",
                     "trailing_diamond": "\ue0b4",
                     "template": " \uf07c {{ .Path }}",
                     "type": "path"
