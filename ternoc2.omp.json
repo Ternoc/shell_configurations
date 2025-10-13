@@ -127,6 +127,7 @@
                     "properties": {
                         "always_enabled": true
                     },
+                    "style":"plain",
                     "template": "\u2570\u2500{{ if gt .Code 0 }}\uf52f{{ else }}\uf05d{{ end }}\uf061",
                     "type": "status"
                 }
