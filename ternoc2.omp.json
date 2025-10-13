@@ -120,7 +120,13 @@
             "type": "prompt",
             "segments": [
                 {
-                    "foreground": "p:solarized_blue",
+                    "style": "plain",
+                    "foreground":"p:solarized_blue",
+                    "type":"text",
+                    "template": "\u2570\u2500"
+                },
+                {
+                    "foreground": "p:solarized_green",
                     "foreground_templates": [
                         "{{ if gt .Code 0 }}p:solarized_red{{ end }}"
                     ],
@@ -128,8 +134,14 @@
                         "always_enabled": true
                     },
                     "style":"plain",
-                    "template": "\u2570\u2500{{ if gt .Code 0 }}\uf52f{{ else }}\uf05d{{ end }}\uf061",
+                    "template": "{{ if gt .Code 0 }}\uf2d3{{ else }}\udb80\udd33{{ end }}",
                     "type": "status"
+                },
+                {
+                    "style": "plain",
+                    "foreground":"p:solarized_blue",
+                    "type":"text",
+                    "template": "\uf061"
                 }
             ]
         }
