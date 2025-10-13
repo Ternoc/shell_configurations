@@ -25,7 +25,7 @@
                 {
                     "background": "p:solarized_red",
                     "style": "diamond",
-                    "leading_diamond": "\ue0b6",
+                    "leading_diamond": "\u256d\u2500\ue0b6",
                     "template": "\uf007 {{ .UserName }} ",
                     "type": "session"
                 },
@@ -90,36 +90,28 @@
             "alignment": "right",
             "segments": [
                 {
-                    "foreground": "#33DD2D",
-                    "foreground_templates": [
-                        "{{ if gt .Code 0 }}#f1184c{{ end }}"
-                    ],
-                    "properties": {
-                        "always_enabled": true
-                    },
-                    "style": "plain",
-                    "template": "{{ if gt .Code 0 }}\uf52f{{ else }}\uf05d{{ end }} ",
-                    "type": "status"
-                },
-                {
-                    "foreground": "p:solarized_cyan",
-                    "style": "plain",
+                    "background": "p:solarized_cyan",
+                    "style": "diamond",
+                    "leading_diamond": "\ue0b6",
+                    "trailing_diamond": "\ue0b4",
                     "template": "\uf017 </>{{ .CurrentDate | date .Format }}",
                     "type": "time"
                 },
                 {
-                    "foreground_templates": [
+                    "background_templates": [
                         "{{if eq \"Charging\" .State.String}}p:solarized_violet{{end}}",
                         "{{if eq \"Discharging\" .State.String}}p:solarized_yellow{{end}}",
                         "{{if eq \"Full\" .State.String}}p:solarized_blue{{end}}"
                     ],
-                    "foreground": "#242424",
-                    "style": "powerline",
+                    "background": "#242424",
+                    "style": "diamond",
+                    "leading_diamond": "\ue0b6",
+                    "trailing_diamond": "\ue0b4",
                     "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 \ueb2d ",
                     "type": "battery"
                 }
             ],
-            "type": "rprompt",
+            "type": "prompt",
             "overflow": "hide"
         },
         {
@@ -128,13 +120,15 @@
             "type": "prompt",
             "segments": [
                 {
-                    "foreground":"p:solarized_blue",
+                    "foreground": "p:solarized_blue",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}p:solarized_red{{ end }}"
+                    ],
                     "properties": {
                         "always_enabled": true
                     },
-                    "style": "plain",
-                    "template": "{{ if .Root }}<#00FF04> \uedd2</> {{ end }}\uf061",
-                    "type": "text"
+                    "template": "\u2570\u2500{{ if gt .Code 0 }}\uf52f{{ else }}\uf05d{{ end }}\uf061",
+                    "type": "status"
                 }
             ]
         }
