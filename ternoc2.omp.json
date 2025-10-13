@@ -24,9 +24,12 @@
             "segments": [
                 {
                     "background": "p:solarized_red",
+                    "background_templates": [
+                        "{{ if .Root }}p:solarized_cyan{{ end }}"
+                    ],
                     "style": "diamond",
                     "leading_diamond": "\u256d\u2500\ue0b6",
-                    "template": "\uf007 {{ .UserName }} ",
+                    "template": "{{ if .Root }}\udb86\udc98{{else}}\uf007{{ end }} {{ .UserName }} ",
                     "type": "session"
                 },
                 {
