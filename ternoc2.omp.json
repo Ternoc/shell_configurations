@@ -35,7 +35,7 @@
                 {
                     "background": "p:solarized_magenta",
                     "style": "diamond",
-                    "template": "\uf233 {{.Icon}} ",
+                    "template": " \uf233 {{.Icon}} ",
                     "type":"os"
                 },
                 {
