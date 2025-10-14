@@ -35,14 +35,17 @@
                 {
                     "background": "p:solarized_magenta",
                     "style": "diamond",
-                    "template": " \uf233 {{.Icon}} ",
+                    "template": " {{.Icon}} ",
                     "type":"os"
                 },
                 {
                     "background": "p:solarized_magenta",
+                    "background_templates": [
+                        "{{ if .SSHSession }}p:solarized_violet{{ end }}"
+                    ],
                     "style": "diamond",
                     "trailing_diamond": "\ue0b4",
-                    "template": "{{ .HostName }} ",
+                    "template": "{{ if .SSHSession }} \uf233{{ else }}\udb80\udf79{{ end }} {{ .HostName }} ",
                     "type": "session"
                 },
                 {
